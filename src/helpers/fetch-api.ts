@@ -9,7 +9,6 @@ export const fetchApi = async(
     try {
         const mergedOptions = {
             // next: {revalidate: 60},
-            cache: "no-cache",
             headers: {
                 "Content-Type": "application/json",
             },
@@ -17,7 +16,7 @@ export const fetchApi = async(
         }        
         const queryString = qs.stringify(urlParamsObject, {encodeValuesOnly: true});
         const requestUrl = `${getStrapiURL(`/api${path}${queryString ? `?${queryString}`: ""}`)}`
-        const res = await fetch(requestUrl, mergedOptions);
+        const res = await fetch(requestUrl, {cache: "no-cache", ...mergedOptions});
         const data = await res.json()
         return data;
     } catch (error) {
