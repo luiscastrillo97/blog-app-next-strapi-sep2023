@@ -8,8 +8,8 @@ export const fetchApi = async(
 ) => {
     try {
         const mergedOptions = {
-            next: {revalidate: 60},
-            // cache: "no-cache",
+            // next: {revalidate: 60},
+            cache: "no-cache",
             headers: {
                 "Content-Type": "application/json",
             },
