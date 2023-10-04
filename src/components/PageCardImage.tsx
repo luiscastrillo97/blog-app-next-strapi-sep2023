@@ -21,7 +21,7 @@ const PageCardImage = ({post}: Props) => {
                     alt={`image ${title}`} 
                     width={width}
                     height={height}
-                    priority
+                    // priority
                 />
             </Link>
             <div className="p-5">
