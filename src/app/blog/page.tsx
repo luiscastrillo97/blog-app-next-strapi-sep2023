@@ -45,8 +45,8 @@ const Blog = async ({searchParams}:Props) => {
   }
 
   return (
-    <div className="space-y-8">
-      <PageHeader title="Latest Posts"/>
+    <div className="space-y-8 pb-3">
+      <PageHeader title="Publicaciones"/>
       <PagePagination pagination={pagination}/>
       <div className="grid gap-4">
         {

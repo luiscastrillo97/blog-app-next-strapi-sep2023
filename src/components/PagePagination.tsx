@@ -25,8 +25,10 @@ const PagePagination = ({pagination}: Props) => {
             {
                 Array.from({length: pageCount}).map((_, index) => (
                     <li key={`array-blog-${index}`}>
-                        <Link href={`/blog?page=${index+1}`} className={`${page === (index+1) ? classNumberActive : classNumber}`}>
-                            {index + 1}
+                        <Link 
+                            href={`/blog?page=${index+1}`} 
+                            className={`${page === (index+1) ? classNumberActive : classNumber}`}>
+                                {index + 1}
                         </Link>
                     </li>
                 ))
